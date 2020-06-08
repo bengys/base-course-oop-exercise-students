@@ -7,8 +7,10 @@ import Missions.*;
 
 public class Kochav extends Hermes implements AerialAttackVehicle, AerialBdaVehicle, AerialIntelligenceVehicle {
 
-    int numMissiles;
+    int NumMissiles;
     String MissileType;
+    String SensorType;
+    String CameraType;
 
     public Kochav(int numMissiles, String missileType, String cameraType, String sensorType,
                   String pilotName, Mission mission, int numHoursSinceRepair, boolean isReady) {
@@ -32,32 +34,32 @@ public class Kochav extends Hermes implements AerialAttackVehicle, AerialBdaVehi
 
     @java.lang.Override
     public int GetNumberOfMissiles() {
-        return 0;
+        return NumMissiles;
     }
 
     @java.lang.Override
     public String GetMissileType() {
-        return null;
+        return MissileType;
     }
 
     @java.lang.Override
     public void SetNumberOfMissiles(int numMissiles) {
-
+        NumMissiles = numMissiles;
     }
 
     @java.lang.Override
-    public void SetMissileType(String MissileType) {
-
+    public void SetMissileType(String missileType) {
+        MissileType = missileType;
     }
 
     @java.lang.Override
     public String GetCameraType() {
-        return null;
+        return CameraType;
     }
 
     @java.lang.Override
-    public void SetCameraType(String CameraType) {
-
+    public void SetCameraType(String cameraType) {
+        CameraType = cameraType;
     }
 
     @java.lang.Override

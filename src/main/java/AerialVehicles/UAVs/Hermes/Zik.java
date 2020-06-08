@@ -12,6 +12,7 @@ public class Zik extends Hermes implements AerialBdaVehicle, AerialIntelligenceV
     String CameraType;
     String SensorType;
 
+
     public Zik(String cameraType, String sensorType, String pilotName, Mission mission, int numHoursSinceRepair, boolean isReady) {
         SetCameraType(cameraType);
         SetSensorType(sensorType);
@@ -23,12 +24,12 @@ public class Zik extends Hermes implements AerialBdaVehicle, AerialIntelligenceV
 
     @java.lang.Override
     public String GetCameraType() {
-        return null;
+        return CameraType;
     }
 
     @java.lang.Override
-    public void SetCameraType(String CameraType) {
-
+    public void SetCameraType(String cameraType) {
+        CameraType = cameraType;
     }
 
     @java.lang.Override
@@ -48,11 +49,11 @@ public class Zik extends Hermes implements AerialBdaVehicle, AerialIntelligenceV
 
     @java.lang.Override
     public String GetSensorType() {
-        return null;
+        return SensorType;
     }
 
     @java.lang.Override
     public void SetSensorType(String sensortype) {
-
+        SensorType = sensortype;
     }
 }

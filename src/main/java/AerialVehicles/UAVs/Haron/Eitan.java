@@ -9,9 +9,9 @@ import Missions.Mission;
 
 public class Eitan extends Haron implements AerialAttackVehicle, AerialIntelligenceVehicle {
 
-    String missileType;
-    String sensorType;
-    int numberOfMissiles;
+    String MissileType;
+    String SensorType;
+    int NumberOfMissiles;
 
     public Eitan(int numberMissiles, String missileName, String sensorName, String pilotName, Mission missionType, int hoursSinceLastRepair, boolean flightReadinessStatus) {
     }
@@ -26,21 +26,21 @@ public class Eitan extends Haron implements AerialAttackVehicle, AerialIntellige
 
     @java.lang.Override
     public int GetNumberOfMissiles() {
-        return  numberOfMissiles;
+        return NumberOfMissiles;
     }
 
     @java.lang.Override
     public String GetMissileType() {
-        return missileType;
+        return MissileType;
     }
 
     @java.lang.Override
     public void SetNumberOfMissiles(int numMissiles) {
-        numberOfMissiles = numMissiles;
+        NumberOfMissiles = numMissiles;
     }
 
     @java.lang.Override
-    public void SetMissileType(String MissileType) { missileType = MissileType;}
+    public void SetMissileType(String missileType) { MissileType = missileType;}
 
     @java.lang.Override
     public String collectIntelligence() {
@@ -51,9 +51,9 @@ public class Eitan extends Haron implements AerialAttackVehicle, AerialIntellige
     }
 
     @java.lang.Override
-    public String GetSensorType() { return sensorType;}
+    public String GetSensorType() { return SensorType;}
 
 
     @java.lang.Override
-    public void SetSensorType(String sensortype){sensorType = sensortype; }
+    public void SetSensorType(String sensortype){SensorType = sensortype; }
 }

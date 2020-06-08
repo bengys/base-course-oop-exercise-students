@@ -36,7 +36,7 @@ public class F15 extends FighterJet implements AerialAttackVehicle, AerialIntell
 
     @java.lang.Override
     public int GetNumberOfMissiles(){
-        return numMissiles;
+        return NumMissiles;
     }
 
     @java.lang.Override

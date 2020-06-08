@@ -17,18 +17,18 @@ public abstract class AerialVehicle {
     }
 
     public void setMission(Mission mission) {
-
+        Mission = mission;
     }
 
 
     public void setHoursOfFlightSinceLastRepair(int hours)
     {
-
+        NumberOfHoursSinceLastRepair = hours;
     }
 
     public int getHoursOfFlightSinceLastRepair()
     {
-        return 0;
+        return NumberOfHoursSinceLastRepair;
     }
 
     public void check()
@@ -56,4 +56,3 @@ public abstract class AerialVehicle {
         setHoursOfFlightSinceLastRepair(0);
     }
 }
-g
