@@ -1,4 +1,4 @@
-package AerialVehicles;
+package AerialVehicles.UAVs.Hermes;
 
 import Missions.BdaMission;
 import Missions.IntelligenceMission;

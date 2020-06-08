@@ -1,9 +1,8 @@
-package AerialVehicles;
+package AerialVehicles.UAVs.Hermes;
 
 import Missions.AttackMission;
-import Missions.IntelligenceMission;
 import Missions.Mission;
 import Missions.MissionTypeException;
 
-public class Eitan{
+public class Kochav{
 }
