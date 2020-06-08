@@ -1,5 +1,10 @@
 package AerialVehicles.UAVs.Hermes;
 
-public abstract class Hermes{
-    final int maintenanceIntervalHours = 100;
+import AerialVehicles.AerialVehicle;
+
+public abstract class Hermes extends AerialVehicle {
+
+    public Hermes() {
+        super(100);
+    }
 }

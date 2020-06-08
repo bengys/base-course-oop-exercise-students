@@ -1,20 +1,25 @@
 package AerialVehicles;
 
-import Entities.Coordinates;
 import Missions.Mission;
-import Missions.MissionTypeException;
 
 
 public abstract class AerialVehicle {
 
-    String pilotName;
-    Mission mission;
-    int numberOfHoursSinceLastFlight;
-    boolean isFlightReady;
+    protected String PilotName;
+    protected Mission Mission;
+    protected int NumberOfHoursSinceLastRepair;
+    protected boolean IsFlightReady;
+
+    final int maintenanceIntervalHours;
+
+    protected AerialVehicle(int maintenanceIntervalHours) {
+        this.maintenanceIntervalHours = maintenanceIntervalHours;
+    }
 
     public void setMission(Mission mission) {
 
     }
+
 
     public void setHoursOfFlightSinceLastRepair(int hours)
     {
@@ -28,21 +33,27 @@ public abstract class AerialVehicle {
 
     public void check()
     {
-
+        if(getHoursOfFlightSinceLastRepair() > maintenanceIntervalHours)
+        {
+            repair();
+        }
     }
 
     public void flyTo()
     {
 
+        System.out.println("Flying to: " + Mission.getCoordinate().getLatitude() + Mission.getCoordinate().getLongitude());
     }
 
     public void land()
     {
-
+        System.out.println("Landing");
     }
 
     public void repair()
     {
-
+        IsFlightReady = false;
+        setHoursOfFlightSinceLastRepair(0);
     }
 }
+g

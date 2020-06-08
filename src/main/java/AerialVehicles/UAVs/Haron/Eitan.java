@@ -3,6 +3,8 @@ package AerialVehicles.UAVs.Haron;
 import AerialVehicles.AerialAttackVehicle;
 import AerialVehicles.AerialIntelligenceVehicle;
 import AerialVehicles.AerialVehicle;
+import Missions.AttackMission;
+import Missions.IntelligenceMission;
 import Missions.Mission;
 
 public class Eitan extends Haron implements AerialAttackVehicle, AerialIntelligenceVehicle {
@@ -16,7 +18,10 @@ public class Eitan extends Haron implements AerialAttackVehicle, AerialIntellige
 
     @java.lang.Override
     public String attack() {
-        return "To be implemented";
+        AttackMission attackMission = (AttackMission)Mission;
+        String attackDesc = PilotName + ": " + "Eitan Attacking " + attackMission.getTarget() + " with: " +
+                GetMissileType() + "X" + GetNumberOfMissiles();
+        return attackDesc;
     }
 
     @java.lang.Override
@@ -39,7 +44,10 @@ public class Eitan extends Haron implements AerialAttackVehicle, AerialIntellige
 
     @java.lang.Override
     public String collectIntelligence() {
-            return "TO BE IMPLEMENTED";
+
+        IntelligenceMission intelMission = (IntelligenceMission)Mission;
+        String intel = PilotName + ": " + "Eitan Collecting Data in " + intelMission.getRegion() + " with sensor type: " + GetSensorType();
+        return intel;
     }
 
     @java.lang.Override

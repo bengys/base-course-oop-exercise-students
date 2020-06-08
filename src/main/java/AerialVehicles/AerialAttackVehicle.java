@@ -6,5 +6,5 @@ public interface AerialAttackVehicle {
     public int GetNumberOfMissiles();
     public String GetMissileType();
     public void SetNumberOfMissiles(int numMissiles);
-    public void SetMissileType(String MissileType);
+    public void SetMissileType(String missileType);
 }

@@ -4,5 +4,7 @@ import AerialVehicles.AerialVehicle;
 
 public abstract class Haron extends AerialVehicle {
 
-    final int maintenanceIntervalHours = 150;
+    public Haron() {
+        super(150);
+    }
 }

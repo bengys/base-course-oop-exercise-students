@@ -4,48 +4,73 @@ import AerialVehicles.AerialAttackVehicle;
 import AerialVehicles.AerialIntelligenceVehicle;
 import AerialVehicles.AerialVehicle;
 import AerialVehicles.FighterJet;
+import Missions.AttackMission;
+import Missions.IntelligenceMission;
+import Missions.Mission;
 
 public class F15 extends FighterJet implements AerialAttackVehicle, AerialIntelligenceVehicle {
-    public F15(string sensorType, int numMissiles) {
+
+    int NumMissiles;
+    String MissileType;
+    String SensorType;
+
+    public F15(String sensorType, int numMissiles, String missileType, String pilotName,
+               Mission mission, int numHoursSinceLastRepair, boolean isFlightReady) {
+        SetSensorType(sensorType);
+        SetNumberOfMissiles(numMissiles);
+        SetMissileType(missileType);
+        PilotName = pilotName;
+        Mission = mission;
+        NumberOfHoursSinceLastRepair = numHoursSinceLastRepair;
+        IsFlightReady = isFlightReady;
     }
 
     @java.lang.Override
     public String attack() {
-        return null;
+        AttackMission attackMission = (AttackMission)Mission;
+        String attackDesc = PilotName + ": " + "F15 Attacking " + attackMission.getTarget() + " with: " +
+            GetMissileType() + "X" + GetNumberOfMissiles();
+        return attackDesc;
+
     }
 
     @java.lang.Override
-    public int GetNumberOfMissiles() {
-        return 0;
+    public int GetNumberOfMissiles(){
+        return numMissiles;
     }
 
     @java.lang.Override
     public String GetMissileType() {
-        return null;
+        return MissileType;
     }
 
     @java.lang.Override
     public void SetNumberOfMissiles(int numMissiles) {
-
+        NumMissiles = numMissiles;
     }
 
     @java.lang.Override
-    public void SetMissileType(String MissileType) {
+    public void SetMissileType(String missileType) {
 
+        MissileType = missileType;
     }
 
     @java.lang.Override
-    public String collectIntelligence() {
-        return null;
+    public String collectIntelligence()
+    {
+        IntelligenceMission intelMission = (IntelligenceMission)Mission;
+        String intel = "F15 Collecting Data in " + intelMission.getRegion() + " with sensor type: " + GetSensorType();
+        return intel;
     }
 
     @java.lang.Override
     public String GetSensorType() {
-        return null;
+
+        return SensorType;
     }
 
     @java.lang.Override
     public void SetSensorType(String sensortype) {
-
+        SensorType = sensortype;
     }
 }

@@ -1,5 +1,8 @@
 package AerialVehicles;
 
-public abstract class FighterJet {
-    final int maintenanceIntervalHours = 250;
+public abstract class FighterJet extends AerialVehicle {
+
+    public FighterJet() {
+        super(250);
+    }
 }
