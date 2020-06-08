@@ -59,7 +59,7 @@ public class F15 extends FighterJet implements AerialAttackVehicle, AerialIntell
     public String collectIntelligence()
     {
         IntelligenceMission intelMission = (IntelligenceMission)Mission;
-        String intel = "F15 Collecting Data in " + intelMission.getRegion() + " with sensor type: " + GetSensorType();
+        String intel = PilotName + ": " + "F15 Collecting Data in " + intelMission.getRegion() + " with sensor type: " + GetSensorType();
         return intel;
     }
 

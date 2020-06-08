@@ -36,7 +36,7 @@ public class Zik extends Hermes implements AerialBdaVehicle, AerialIntelligenceV
     public String preformBda() {
         BdaMission bdaMission = (BdaMission) Mission;
         String bdaDesc = PilotName + ": " + "Zik taking pictures of " + bdaMission.getObjective() +
-                " with: " + GetCameraType();
+                " with: " + GetCameraType() + " camera";
         return bdaDesc;
     }
 

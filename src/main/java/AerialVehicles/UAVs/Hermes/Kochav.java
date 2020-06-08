@@ -66,7 +66,7 @@ public class Kochav extends Hermes implements AerialAttackVehicle, AerialBdaVehi
     public String preformBda() {
         BdaMission bdaMission = (BdaMission) Mission;
         String bdaDesc = PilotName + ": " + "Kochav taking pictures of " + bdaMission.getObjective() +
-                " with: " + GetCameraType();
+                " with: " + GetCameraType() + " camera";
         return bdaDesc;
     }
 
@@ -79,11 +79,11 @@ public class Kochav extends Hermes implements AerialAttackVehicle, AerialBdaVehi
 
     @java.lang.Override
     public String GetSensorType() {
-        return null;
+        return SensorType;
     }
 
     @java.lang.Override
     public void SetSensorType(String sensortype) {
-
+        SensorType = sensortype;
     }
 }

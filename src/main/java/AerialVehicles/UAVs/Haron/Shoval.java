@@ -64,7 +64,7 @@ public class Shoval extends Haron implements AerialIntelligenceVehicle, AerialBd
     public String preformBda() {
         BdaMission bdaMission = (BdaMission) Mission;
         String bdaDesc = PilotName + ": " + "Shoval taking pictures of " + bdaMission.getObjective() +
-                " with: " + GetCameraType();
+                " with: " + GetCameraType() + " camera";
         return bdaDesc;
     }
 

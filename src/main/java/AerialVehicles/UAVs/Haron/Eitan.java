@@ -13,7 +13,16 @@ public class Eitan extends Haron implements AerialAttackVehicle, AerialIntellige
     String SensorType;
     int NumberOfMissiles;
 
-    public Eitan(int numberMissiles, String missileName, String sensorName, String pilotName, Mission missionType, int hoursSinceLastRepair, boolean flightReadinessStatus) {
+    public Eitan(int numberMissiles, String missileName, String sensorName, String pilotName,
+                 Mission missionType, int hoursSinceLastRepair, boolean flightReadinessStatus)
+    {
+        SetNumberOfMissiles(numberMissiles);
+        SetMissileType(missileName);
+        SetSensorType(sensorName);
+        PilotName = pilotName;
+        Mission = missionType;
+        NumberOfHoursSinceLastRepair = hoursSinceLastRepair;
+        IsFlightReady = flightReadinessStatus;
     }
 
     @java.lang.Override

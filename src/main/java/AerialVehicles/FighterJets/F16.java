@@ -72,14 +72,13 @@ public class F16 extends FighterJet implements AerialIntelligenceVehicle, Aerial
     public String preformBda() {
         BdaMission bdaMission = (BdaMission) Mission;
         String bdaDesc = PilotName + ": " + "F16 taking pictures of " + bdaMission.getObjective() +
-                " with: " + GetCameraType();
+                " with: " + GetCameraType() + " camera";
         return bdaDesc;
     }
 
-    @java.lang.Override
-    public String collectIntelligence() {
+        public String collectIntelligence() {
         IntelligenceMission intelMission = (IntelligenceMission)Mission;
-        String intel = PilotName + ": " + "F16 CEollecting Data in " + intelMission.getRegion() + " with sensor type: " + GetSensorType();
+        String intel = PilotName + ": " + "F16 Collecting Data in " + intelMission.getRegion() + " with sensor type: " + GetSensorType();
         return intel;
     }
 
