@@ -21,7 +21,27 @@ public abstract class AerialVehicle {
 
     }
 
+    public int getHoursOfFlightSinceLastRepair()
+    {
+        return 0;
+    }
+
     public void check()
+    {
+
+    }
+
+    public void flyTo()
+    {
+
+    }
+
+    public void land()
+    {
+
+    }
+
+    public void repair()
     {
 
     }
